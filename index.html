@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genious</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="mt-2">
+        <div class="navbar bg-base-100 bg-lime-100 px-12">
+            <div class="navbar-start text-2xl">
+             <h1><span class="txt-7xl font-bold">Interactive</span> <br><span class="font-semibold">Geometry-Genious</span></h1>
+            </div>
+            <div class="navbar-end">
+              <a class="btn bg-blue-600 px-10" id="new-blog">Blog</a> 
+            </div>
+          </div>
+    </header>
+    <main>
+        <section class="flex flex-col md:flex-row mt-12 px-12 gap-4">
+            <div class="w-full md:w-[70%] lg:w-[80%] grid md:grid-cols-3 gap-6">
+                <div class="randomColors-div card w-full shadow-xl px-15 py-10 color-container">
+                    <figure><img class="w-50" src="./images/triangle.png" alt="triangle" /></figure>
+                    <div class="text-center mt-4">
+                      <h4 class="text-2xl font-bold "id="triangle-title">Triangle</h4>
+                      <p>Area (A) = 0.5 x b x h</p>
+                      <div class="card-actions justify-center ">
+                        <input id="triangle-base" class="bg-gray-200 w-[20%] px-2"type="text" placeholder="b">
+                        <h5 class="font-semibold text-base">cm</h5>
+                        <input id="triangle-height" class="bg-gray-200 w-[20%] px-2" type="text"placeholder="h">
+                        <h5 class="font-semibold text-base">cm</h5>
+                      </div>
+                      <button id="triangle-btn" class="btn bg-blue-600 px-25 mt-4 w-[75%]">
+                        Calculate
+                      </button>
+                    </div>
+                </div>
+                <div class="randomColors-div card w-full shadow-xl px-15 py-10">
+                    <figure><img class="w-50" src="./images/rectangle.png" alt="rectangle" /></figure>
+                    <div class="text-center mt-4">
+                      <h4 class="text-2xl font-bold" id="rectangle-title">Rectangle</h4>
+                      <p>Area (A) = w x l</p>
+                      <div class="card-actions justify-center ">
+                        <input id="rectangle-width" class="bg-gray-200 w-[20%] px-2"type="text" placeholder="w">
+                        <h5 class="font-semibold text-base">cm</h5>
+                        <input id="rectangle-length" class="bg-gray-200 w-[20%] px-2" type="text"placeholder="l">
+                        <h5 class="font-semibold text-base ">cm</h5>
+                      </div>
+                      <button id="rectangle-btn" class="btn bg-blue-600 px-25 mt-4 w-[75%]">
+                        Calculate
+                      </button>
+                    </div>
+                </div>
+                <div class="randomColors-div card w-full shadow-xl px-15 py-10">
+                    <figure><img class="w-50" src="./images/parallelogram.png" alt="parallelogram" /></figure>
+                    <div class="text-center mt-4">
+                      <h4 class="text-2xl font-bold" id="parallelogram-title">parallelogram</h4>
+                      <p>Area (A) = b x h</p>
+                      <div class="card-actions justify-center ">
+                        <input id="parallelogram-base" class="bg-gray-200 w-[20%] px-2"type="text" placeholder="b">
+                        <h5 class="font-semibold text-base">cm</h5>
+                        <input id="parallelogram-height" class="bg-gray-200 w-[20%] px-2" type="text"placeholder="h">
+                        <h5 class="font-semibold text-base">cm</h5>
+                      </div>
+                      <button id="parallelogram-btn" class="btn bg-blue-600 px-25 mt-4 w-[75%]">
+                        Calculate
+                      </button>
+                    </div>
+                </div>
+                <div class="randomColors-div card w-full shadow-xl px-15 py-10">
+                    <figure><img class="w-50" src="./images/rhombus.png" alt="rhombus" /></figure>
+                    <div class="text-center mt-4">
+                      <h4 class="text-2xl font-bold"id="rhombus-title">Rhombus</h4>
+                      <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+                      <div class="card-actions justify-center ">
+                        <input id="diagonal1" class="bg-gray-200 w-[20%] px-2"type="text" placeholder="d1">
+                        <h5 class="font-semibold text-base">cm</h5>
+                        <input id="diagonal2" class="bg-gray-200 w-[20%] px-2" type="text"placeholder="d2">
+                        <h5 class="font-semibold text-base">cm</h5>
+                      </div>
+                      <button id="rhombus-btn" class="btn bg-blue-600 px-25 mt-4 w-[75%]">
+                        Calculate
+                      </button>
+                    </div>
+                </div>
+                <div class="randomColors-div card w-full shadow-xl px-15 py-10">
+                    <figure><img class="w-50" src="./images/pentagon.png" alt="pentagon" /></figure>
+                    <div class="text-center mt-4">
+                      <h4 class="text-2xl font-bold"id="pentagon-title">Pentagon</h4>
+                      <p>Area (A) = 0.5 x p x b</p>
+                      <div class="card-actions justify-center ">
+                        <input id="pentagon-perimeter" class="bg-gray-200 w-[20%] px-2"type="text" placeholder="p">
+                        <h5 class="font-semibold text-base">cm</h5>
+                        <input id="pentagon-apothem" class="bg-gray-200 w-[20%] px-2" type="text"placeholder="b">
+                        <h5 class="font-semibold text-base">cm</h5>
+                      </div>
+                      <button id="pentagon-btn" class="btn bg-blue-600 px-25 mt-4 w-[75%]">
+                        Calculate
+                      </button>
+                    </div>
+                </div>
+                <div class="randomColors-div card w-full shadow-xl px-15 py-10">
+                    <figure><img class="w-50" src="./images/ellipse.png" alt="ellipse" /></figure>
+                    <div class="text-center mt-4">
+                      <h4 class="text-2xl font-bold" id="ellipse-title">Ellipse</h4>
+                      <p>Area (A) = πab</p>
+                      <div class="card-actions justify-center ">
+                        <input id="a-axis" class="bg-gray-200 w-[20%]"type="text" placeholder="a">
+                        <h5 class="font-semibold text-base">cm</h5>
+                        <input id="b-axis" class="bg-gray-200 w-[20%] block" type="text"placeholder="a">
+                        <h5 class="font-semibold text-base">cm</h5>
+                      </div>
+                      <button id="ellipse-btn" class="btn bg-blue-600 px-25 mt-4 w-[75%]">
+                        Calculate
+                      </button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-start w-[26%] h-100">
+                <h1 class="text-bold underline font-bold text-center">Area Calculation</h1>
+                <div class="mt-2">
+                    <div class="card  shadow-lg">
+                      <table class="table-auto gap-0.5">
+                        <tbody id="table-container">
+                          <!--<tr >
+                             <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><button></button></td> 
+                          </tr>-->
+                        </tbody>
+                      </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- js file connection -->
+    <script src="js/utilities.js" ></script>
+    <script src="js/randomColor.js" ></script>
+    <script src="js/card.js" ></script>
+</body>
+</html>
